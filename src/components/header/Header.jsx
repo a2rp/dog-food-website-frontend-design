@@ -42,13 +42,13 @@ const Header = () => {
                             <FaAngleDown className={styles.icon} />
                         </div>
                         <div className={styles.productNavlinksContainer}>
-                            <NavLink to="/product/profuct1" className={styles.productNavlink}>
+                            <NavLink to="/product/product1" className={styles.productNavlink}>
                                 Product 1
                             </NavLink>
-                            <NavLink to="/product/profuct2" className={styles.productNavlink}>
+                            <NavLink to="/product/product2" className={styles.productNavlink}>
                                 Product 2
                             </NavLink>
-                            <NavLink to="/product/profuct3" className={styles.productNavlink}>
+                            <NavLink to="/product/product3" className={styles.productNavlink}>
                                 Product 3
                             </NavLink>
                         </div>

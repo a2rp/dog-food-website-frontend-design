@@ -3,7 +3,12 @@ import styles from "./styles.module.scss";
 
 const Product1 = () => {
     return (
-        <div>Product1</div>
+        <div style={{
+            fontSize: "20px",
+            fontWeight: "bold"
+        }}>
+            Product 1
+        </div>
     )
 }
 

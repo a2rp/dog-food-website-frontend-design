@@ -4,9 +4,13 @@ import { Outlet } from 'react-router-dom';
 
 const Product = () => {
     return (
-        <div>
-            Product
-            <Outlet />
+        <div className={styles.container}>
+            <div className={styles.main}>
+                <div className={styles.title}>Product</div>
+                <div className={styles.outlet}>
+                    <Outlet />
+                </div>
+            </div>
         </div>
     )
 }
