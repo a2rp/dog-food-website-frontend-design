@@ -1,3 +1,7 @@
+
+![image](https://github.com/a2rp/dog-food-website-frontend-design/assets/5670738/91a7b480-5f38-4214-92a4-8c079e99bfb3)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
