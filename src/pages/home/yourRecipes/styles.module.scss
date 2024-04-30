@@ -1,0 +1,118 @@
+.container {
+    margin-top: 100px;
+
+    .recipesTitle {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 900;
+        color: #007ba7;
+        padding: 15px;
+    }
+
+    .aboutTitle {
+        padding: 15px;
+        // margin-top: 15px;
+        display: flex;
+        justify-content: center;
+
+        .aboutTitleMain {
+            text-align: center;
+            max-width: 400px;
+            color: #007ba7;
+        }
+    }
+
+    .main {
+        // border: 1px solid #f00;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        .columnsContainer {
+            // border: 1px solid #f00;
+            display: flex;
+            width: 100%;
+            max-width: 1440px;
+            gap: 50px;
+
+            @media only screen and (width<1000px) {
+                flex-wrap: wrap;
+                // gap: 30px;
+            }
+
+            .col1,
+            .col2,
+            .col3 {
+                // border: 1px solid #f00;
+                width: 100%;
+            }
+
+            .col2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .image {
+                    width: 100%;
+                    // border: 1px solid #f00;
+                    // box-shadow: -5px 10px;
+                    // border-radius: 50%;
+                }
+
+                @media only screen and (width<550px) {
+                    .image {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .col1,
+            .col3 {
+                display: flex;
+                flex-direction: column;
+                // align-items: space-between;
+                justify-content: space-between;
+                padding: 30px;
+
+                @media only screen and (width<1000px) {
+                    gap: 30px;
+                }
+
+                .col1Row1,
+                .col1Row2,
+                .col3Row1,
+                .col3Row2 {
+                    .col1Title,
+                    .col3Title {
+                        font-size: 25px;
+                        font-weight: 500;
+                        color: #007ba7;
+                    }
+
+                    .col1Text,
+                    .col3Text {
+                        color: #007ba7;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .recipesLink {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+
+        .seeYourRecipes {
+            background-color: #faae02;
+            color: #fff;
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

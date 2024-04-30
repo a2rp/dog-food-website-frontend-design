@@ -1,0 +1,233 @@
+.container {
+    // border: 10px solid #ff0;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .main {
+        // border: 10px solid #ff0;
+        width: 100%;
+        // max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        // border-bottom: 1px solid #aaa;
+        padding: 0 15px;
+
+        .leftSection {
+            // width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                background-color: #faae02;
+                color: #fff;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+            }
+
+            .navlink {
+                text-decoration: none;
+                color: #007ba7;
+                font-size: 16px;
+                padding: 30px;
+                font-weight: 500;
+
+                @media only screen and (width<900px) {
+                    display: none;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .productNavlinksParent {
+                position: relative;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                padding: 30px;
+                gap: 10px;
+
+                @media only screen and (width<900px) {
+                    display: none;
+                }
+
+                &:hover {
+                    .productIcon {
+                        transform: rotateZ(180deg);
+                    }
+                }
+
+                .productText {
+                    color: #007ba7;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                .productIcon {
+                    // border: 1px solid #f00;
+                    color: #007ba7;
+                    transform-origin: center;
+                    transition: transform 0.2s ease;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &:hover {
+                    .productNavlinksContainer {
+                        display: block;
+                    }
+                }
+
+                .productNavlinksContainer {
+                    background-color: #fff;
+                    border: 1px solid #000;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    display: none;
+                    animation: animateProducts 0.3s ease;
+                    @keyframes animateProducts {
+                        0% {
+                            transform: translateY(30px);
+                        }
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .productNavlink {
+                        // border: 1px solid #000;
+                        display: block;
+                        text-align: center;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .rightSection {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .login {
+                background-color: #faae02;
+                color: #fff;
+                padding: 15px 30px;
+                border-radius: 30px;
+
+                @media only screen and (width<900px) {
+                    display: none;
+                }
+            }
+
+            .hamburger {
+                // border: 1px solid #f00;
+                position: relative;
+                width: 100px;
+                height: 100%;
+                cursor: pointer;
+                display: none;
+
+                @media only screen and (width<900px) {
+                    display: block;
+                }
+
+                .line1,
+                .line2,
+                .line3 {
+                    position: absolute;
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 50px;
+                    background-color: #000;
+                    height: 5px;
+                    transition: transform 0.2s ease;
+                }
+
+                .line1 {
+                    transform: translateY(-10px);
+                }
+                .line2 {
+                }
+                .line3 {
+                    transform: translateY(10px);
+                }
+            }
+
+            .hamburgerLinksContainer {
+                position: fixed;
+                left: 0;
+                top: 100px;
+                height: calc(100vh - 100px);
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: transform 0.2s ease;
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+
+                .empty {
+                    // border: 3px solid #f00;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .navlinksContainer {
+                    // border: 3px solid #00f;
+                    flex: 0 0 250px;
+                    overflow: auto;
+                    background-color: #000;
+
+                    .hamburgerNavlink {
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        padding-left: 15px;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .productNavlinkText {
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        padding-left: 15px;
+                    }
+
+                    .productNavlinksContainer {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

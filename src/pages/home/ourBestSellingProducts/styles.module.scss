@@ -1,0 +1,86 @@
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+    .main {
+        width: 100%;
+        max-width: 1440px;
+
+        .title {
+            color: #007ba7;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+        .aboutTitle {
+            // border: 1px solid #f00;
+            padding: 15px;
+            // margin-top: 15px;
+            display: flex;
+            justify-content: center;
+
+            .aboutTitleMain {
+                text-align: center;
+                max-width: 400px;
+                color: #007ba7;
+            }
+        }
+
+        .colsContainer {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            padding: 15px;
+
+            @media only screen and (width<1050px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .col1,
+            .col2,
+            .col3 {
+                padding: 30px;
+                border-radius: 15px;
+                overflow: hidden;
+                text-align: center;
+                box-shadow: 0 0 20px 2px #ccc;
+
+                .image {
+                    width: 100%;
+                }
+
+                .productName {
+                    margin-top: 15px;
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+                .price {
+                    font-size: 32px;
+                    color: #007ba7;
+                }
+
+                .buttonContainer {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: center;
+
+                    .buyName {
+                        background-color: #007ba7;
+                        color: #fff;
+                        font-weight: 500;
+                        width: 200px;
+                        height: 60px;
+                        border-radius: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

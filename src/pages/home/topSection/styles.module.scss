@@ -1,0 +1,86 @@
+.container {
+    .topSection {
+        // border: 1px solid #f00;
+        background-color: #007ba7;
+        // height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main {
+            width: 100%;
+            max-width: 1440px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+
+            @media only screen and (width<1000px) {
+                flex-wrap: wrap;
+
+                .col2 {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .col1,
+            .col2 {
+                // border: 1px solid #ccc;
+            }
+
+            .col1 {
+                width: 100%;
+
+                .mainText {
+                    font-size: 100px;
+                    font-weight: 900;
+                    color: #fff;
+
+                    @media only screen and (width<1000px) {
+                        font-size: 50px;
+                    }
+                }
+
+                .infoText {
+                    margin-top: 15px;
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+
+                .signup {
+                    margin-top: 30px;
+                    background-color: #faae02;
+                    color: #fff;
+                    padding: 15px 30px;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 250px;
+                    text-decoration: none;
+                    font-size: 32px;
+                }
+            }
+
+            .col2 {
+                // border: 1px solid #f00;
+                display: flex;
+                // justify-content: flex-end;
+
+                @media only screen and (width<500px) {
+                    .image1 {
+                        width: 100%;
+                    }
+                }
+
+                .image1 {
+                    // border: 1px solid #f00;
+                }
+            }
+        }
+    }
+}

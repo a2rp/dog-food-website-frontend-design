@@ -1,0 +1,112 @@
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: #fef4dc;
+    padding: 15px;
+
+    .main {
+        width: 100%;
+        max-width: 800px;
+
+        .titleContainer {
+            display: flex;
+            justify-content: center;
+
+            .title {
+                color: #007ba7;
+                text-align: center;
+                font-size: 32px;
+                font-weight: 900;
+                max-width: 500px;
+            }
+        }
+
+        .vetsSuggestionsContainer {
+            // border: 1px solid #f00;
+            margin-top: 30px;
+            display: flex;
+            gap: 50px;
+
+            @media only screen and (width<800px) {
+                flex-wrap: wrap;
+            }
+
+            .vetsContainer {
+                // border: 1px solid #f00;
+                flex: 0 0 300px;
+                display: flex;
+                gap: 30px;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @media only screen and (width<800px) {
+                    flex-grow: 1;
+                }
+
+                .vet {
+                    cursor: pointer;
+                    height: 100px;
+                    background-color: #fff8e8;
+                    border-radius: 15px;
+                    padding: 15px;
+                    box-shadow: 0 0 15px 1px #f1e9d5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+
+                    .imageContainer {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background-color: #000;
+                    }
+
+                    .textContainer {
+                        .name {
+                            font-weight: 700;
+                            font-size: 20px;
+                            color: #007ba7;
+                        }
+                        .profession {
+                            color: #007ba7;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #fff;
+                    }
+                }
+
+                .vet:nth-child(1) {
+                    background-color: #fff;
+                }
+            }
+
+            .suggestionsContainer {
+                .suggestion {
+                    .suggestTitle {
+                        font-size: 24px;
+                        color: #007ba7;
+                        font-weight: 600;
+                    }
+                    .suggestStar {
+                        margin-top: 15px;
+                        display: flex;
+                        gap: 15px;
+
+                        .starIcon {
+                            font-size: 32px;
+                        }
+                    }
+                    .suggestDetail {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        color: #007ba7;
+                    }
+                }
+            }
+        }
+    }
+}

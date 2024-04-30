@@ -1,0 +1,82 @@
+.container {
+    margin-top: 100px;
+    background-color: #faae02;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+
+    .main {
+        width: 100%;
+        max-width: 1440px;
+
+        .title {
+            color: #fff;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+        .aboutTitle {
+            padding: 15px;
+            // margin-top: 15px;
+            display: flex;
+            justify-content: center;
+
+            .aboutTitleMain {
+                text-align: center;
+                max-width: 400px;
+                color: #fff;
+            }
+        }
+
+        .imagesTextContainer {
+            display: flex;
+            justify-content: center;
+
+            .columnsContainer {
+                width: 100%;
+                max-width: 1440px;
+                display: flex;
+                justify-content: space-between;
+                gap: 50px;
+
+                @media only screen and (width<900px) {
+                    flex-wrap: wrap;
+                }
+
+                .col1,
+                .col2,
+                .col3 {
+                    width: 100%;
+                    // border: 1px solid #f00;
+                    text-align: center;
+                    padding: 15px;
+                    position: relative;
+
+                    .image {
+                        height: 200px;
+                    }
+
+                    .textContainer {
+                        height: calc(100% - 200px);
+                        // border: 1px solid #f00;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .colHeading {
+                            font-size: 32px;
+                            font-weight: 500;
+                            color: #fff;
+                        }
+
+                        .colText {
+                            margin-top: 15px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

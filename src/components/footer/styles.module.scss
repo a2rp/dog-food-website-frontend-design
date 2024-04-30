@@ -1,0 +1,207 @@
+.container {
+    background-color: #ede7d9;
+    padding: 30px 0;
+
+    .addressContactEmail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        flex-wrap: wrap;
+
+        .address,
+        .contact,
+        .email {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .iconContainer {
+                background-color: #faae02;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    font-size: 20px;
+                }
+            }
+            .iconText {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .navlinks {
+        margin-top: 30px;
+        height: 100px;
+        background-color: #f6e7c2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 15px;
+
+        .navlink {
+            color: #459cb3;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+    .bottom {
+        margin-top: 30px;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+
+        .colsContainer {
+            width: 100%;
+            max-width: 1440px;
+            // border: 1px solid #f00;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            @media only screen and (width<1000px) {
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+
+            .col1,
+            .col3 {
+                // border: 1px solid #f00;
+                width: 100%;
+            }
+
+            .col1 {
+                .text {
+                    font-weight: bold;
+                }
+
+                .emailInputContainer {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 40px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    background-color: #fff;
+                    max-width: 250px;
+
+                    .emailInput {
+                        height: 100%;
+                        border: none;
+                        outline: none;
+                        padding-left: 15px;
+
+                        ::-webkit-input-placeholder {
+                            /* Chrome/Opera/Safari */
+                            color: #2c92b1;
+                        }
+                        ::-moz-placeholder {
+                            /* Firefox 19+ */
+                            color: #2c92b1;
+                        }
+                        :-ms-input-placeholder {
+                            /* IE 10+ */
+                            color: #2c92b1;
+                        }
+                        :-moz-placeholder {
+                            /* Firefox 18- */
+                            color: #2c92b1;
+                        }
+                    }
+
+                    .arrowRightContainer {
+                        background-color: #fdcc5f;
+                        flex: 0 0 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            .arrowRightIcon {
+                                transform: translateX(10px);
+                            }
+                        }
+
+                        .arrowRightIcon {
+                            color: #2c92b1;
+                            transition: transform 0.2s ease;
+                        }
+                    }
+                }
+            }
+
+            .col2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                @media only screen and (width<1000px) {
+                    width: 100%;
+                }
+
+                .facebookIcon,
+                .instagramIcon {
+                    background-color: #2c92b1;
+                    padding: 5px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .col3 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .line1 {
+                    font-size: 24px;
+                    color: #007ba7;
+                    text-align: right;
+                }
+                .line2 {
+                    margin-top: 5px;
+                    font-size: 20px;
+                    color: #007ba7;
+
+                    sup {
+                        font-size: 12px;
+                    }
+                }
+                .line3 {
+                    margin-top: 5px;
+                    font-size: 16px;
+                    color: #007ba7;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .line3Container {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        .goDotIcon {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

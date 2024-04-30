@@ -1,0 +1,56 @@
+.container {
+    // border: 1px solid #f00;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+
+    .header {
+        // border: 10px solid #f00;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99;
+    }
+
+    .main {
+        // border: 3px solid #f00;
+        margin-top: 100px;
+        height: calc(100vh - 100px);
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+
+        .router {
+            width: 100%;
+            // max-width: 1440px;
+
+            .pageRoutes {
+                min-height: calc(100vh - 100px);
+                // padding: 15px;
+                // border: 1px solid #f00;
+            }
+
+            .footer {
+                // border: 1px solid #f00;
+                // height: 300px;
+            }
+        }
+    }
+
+    .arrowUp {
+        z-index: 99;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        // font-size: 32px;
+        background-color: #000;
+        color: orangered;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: none;
+    }
+}
