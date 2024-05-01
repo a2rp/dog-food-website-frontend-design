@@ -52,5 +52,10 @@
         height: 40px;
         cursor: pointer;
         display: none;
+        transition: box-shadow 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 0 15px 3px #aaa;
+        }
     }
 }

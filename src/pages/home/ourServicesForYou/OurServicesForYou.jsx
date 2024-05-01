@@ -22,14 +22,14 @@ const OurServicesForYou = () => {
                             </div>
                         </div>
                         <div className={styles.col2}>
-                            <img src={image1} alt="" />
+                            <img src={image2} alt="" />
                             <div className={styles.textContainer}>
                                 <div className={styles.colHeading}>On time delivery</div>
                                 <div className={styles.colText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam deserunt commodi sequi autem id neque magnam rerum labore odit.</div>
                             </div>
                         </div>
                         <div className={styles.col3}>
-                            <img src={image1} alt="" />
+                            <img src={image3} alt="" />
                             <div className={styles.textContainer}>
                                 <div className={styles.colHeading}>Secured packaging</div>
                                 <div className={styles.colText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam deserunt commodi sequi autem id neque magnam rerum labore odit.</div>
