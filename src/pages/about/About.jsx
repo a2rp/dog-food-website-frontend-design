@@ -10,9 +10,9 @@ const About = () => {
                     <div className={styles.whoWeAre}>WHO WE ARE</div>
                     <div className={styles.aboutUs}>ABOUT <span className={styles.us}>US</span></div>
 
-                    <div className={styles.para1}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aliquam corrupti vero amet suscipit nulla harum, illo saepe aliquid alias tempora eveniet omnis tenetur recusandae eius, officiis quae, culpa laboriosam.</div>
+                    <div className={styles.para1}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
 
-                    <div className={styles.para2}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, cum inventore. Sapiente harum corrupti quibusdam deleniti? Esse debitis dignissimos rem est cum nostrum aspernatur commodi quam fuga. Aliquid quae ipsum quam eos, voluptates suscipit. Quos, magni inventore ipsa vero excepturi enim optio debitis accusantium, corrupti nam provident voluptatibus obcaecati incidunt.</div>
+                    <div className={styles.para2}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
 
                     <div className={styles.readMore}>READ MORE</div>
                 </div>

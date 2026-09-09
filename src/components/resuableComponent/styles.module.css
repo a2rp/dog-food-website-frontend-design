@@ -1,0 +1,126 @@
+.container {
+  margin-top: 100px;
+}
+.container .mainTitle {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  color: #007ba7;
+  padding: 15px;
+}
+.container .aboutTitle {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.container .aboutTitle .aboutTitleMain {
+  text-align: center;
+  max-width: 400px;
+  color: #007ba7;
+}
+.container .main {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.container .main .columnsContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  gap: 50px;
+}
+@media only screen and (width < 1000px) {
+  .container .main .columnsContainer {
+    flex-wrap: wrap;
+  }
+}
+.container .main .columnsContainer .col1,
+.container .main .columnsContainer .col2,
+.container .main .columnsContainer .col3 {
+  width: 100%;
+}
+.container .main .columnsContainer .col2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .columnsContainer .col2 .image {
+  width: 100%;
+}
+@media only screen and (width < 550px) {
+  .container .main .columnsContainer .col2 .image {
+    width: 100%;
+  }
+}
+.container .main .columnsContainer .col1,
+.container .main .columnsContainer .col3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+@media only screen and (width < 1000px) {
+  .container .main .columnsContainer .col1,
+  .container .main .columnsContainer .col3 {
+    gap: 30px;
+  }
+}
+.container .main .columnsContainer .col1 .col1Row1 .col1Title,
+.container .main .columnsContainer .col1 .col1Row1 .col3Title,
+.container .main .columnsContainer .col1 .col1Row2 .col1Title,
+.container .main .columnsContainer .col1 .col1Row2 .col3Title,
+.container .main .columnsContainer .col1 .col3Row1 .col1Title,
+.container .main .columnsContainer .col1 .col3Row1 .col3Title,
+.container .main .columnsContainer .col1 .col3Row2 .col1Title,
+.container .main .columnsContainer .col1 .col3Row2 .col3Title,
+.container .main .columnsContainer .col3 .col1Row1 .col1Title,
+.container .main .columnsContainer .col3 .col1Row1 .col3Title,
+.container .main .columnsContainer .col3 .col1Row2 .col1Title,
+.container .main .columnsContainer .col3 .col1Row2 .col3Title,
+.container .main .columnsContainer .col3 .col3Row1 .col1Title,
+.container .main .columnsContainer .col3 .col3Row1 .col3Title,
+.container .main .columnsContainer .col3 .col3Row2 .col1Title,
+.container .main .columnsContainer .col3 .col3Row2 .col3Title {
+  font-size: 25px;
+  font-weight: 500;
+  color: #007ba7;
+}
+.container .main .columnsContainer .col1 .col1Row1 .col1Text,
+.container .main .columnsContainer .col1 .col1Row1 .col3Text,
+.container .main .columnsContainer .col1 .col1Row2 .col1Text,
+.container .main .columnsContainer .col1 .col1Row2 .col3Text,
+.container .main .columnsContainer .col1 .col3Row1 .col1Text,
+.container .main .columnsContainer .col1 .col3Row1 .col3Text,
+.container .main .columnsContainer .col1 .col3Row2 .col1Text,
+.container .main .columnsContainer .col1 .col3Row2 .col3Text,
+.container .main .columnsContainer .col3 .col1Row1 .col1Text,
+.container .main .columnsContainer .col3 .col1Row1 .col3Text,
+.container .main .columnsContainer .col3 .col1Row2 .col1Text,
+.container .main .columnsContainer .col3 .col1Row2 .col3Text,
+.container .main .columnsContainer .col3 .col3Row1 .col1Text,
+.container .main .columnsContainer .col3 .col3Row1 .col3Text,
+.container .main .columnsContainer .col3 .col3Row2 .col1Text,
+.container .main .columnsContainer .col3 .col3Row2 .col3Text {
+  color: #007ba7;
+  font-size: 16px;
+}
+.container .recipesLink {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.container .recipesLink .seeYourRecipes {
+  background-color: #faae02;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease;
+}
+.container .recipesLink .seeYourRecipes:hover {
+  box-shadow: 0 0 15px 3px #aaa;
+}/*# sourceMappingURL=styles.module.css.map */

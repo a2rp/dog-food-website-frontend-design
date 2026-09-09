@@ -7,7 +7,7 @@ const YourRecipes = () => {
         <div className={styles.container}>
             <div className={styles.recipesTitle}>Freshly made food for good health.</div>
             <div className={styles.aboutTitle}>
-                <div className={styles.aboutTitleMain}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos facere, quos corrupti dolore iste modi.</div>
+                <div className={styles.aboutTitleMain}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
             </div>
             <div className={styles.main}>
                 <div className={styles.columnsContainer}>

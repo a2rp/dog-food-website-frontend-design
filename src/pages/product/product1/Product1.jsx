@@ -7,7 +7,7 @@ const Product1 = () => {
             fontSize: "20px",
             fontWeight: "bold"
         }}>
-            Product 1
+            Daily Balance Bowl
         </div>
     )
 }

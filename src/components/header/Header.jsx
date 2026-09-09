@@ -43,13 +43,13 @@ const Header = () => {
                         </div>
                         <div className={styles.productNavlinksContainer}>
                             <NavLink to="/product/product1" className={styles.productNavlink}>
-                                Product 1
+                                Daily Balance Bowl
                             </NavLink>
                             <NavLink to="/product/product2" className={styles.productNavlink}>
-                                Product 2
+                                Active Pup Recipe
                             </NavLink>
                             <NavLink to="/product/product3" className={styles.productNavlink}>
-                                Product 3
+                                Gentle Senior Blend
                             </NavLink>
                         </div>
                     </div>
@@ -82,9 +82,9 @@ const Header = () => {
                             <NavLink to="/services" className={styles.hamburgerNavlink}>Services</NavLink>
                             <div className={styles.productNavlinkText}>Product</div>
                             <div className={styles.productNavlinksContainer}>
-                                <NavLink to="/product/product1" className={styles.hamburgerNavlink}>Product 1</NavLink>
-                                <NavLink to="/product/product2" className={styles.hamburgerNavlink}>Product 2</NavLink>
-                                <NavLink to="/product/product3" className={styles.hamburgerNavlink}>Product 3</NavLink>
+                                <NavLink to="/product/product1" className={styles.hamburgerNavlink}>Daily Balance Bowl</NavLink>
+                                <NavLink to="/product/product2" className={styles.hamburgerNavlink}>Active Pup Recipe</NavLink>
+                                <NavLink to="/product/product3" className={styles.hamburgerNavlink}>Gentle Senior Blend</NavLink>
                             </div>
                             <NavLink to="/reviews" className={styles.hamburgerNavlink}>Reviews</NavLink>
                             <NavLink to="/faq" className={styles.hamburgerNavlink}>FAQ</NavLink>

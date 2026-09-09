@@ -89,7 +89,7 @@ const VetsSuggestions = () => {
                             : ""}
                         {vetNumber === "vetTwo"
                             ? <div className={styles.suggestion}>
-                                <div className={styles.suggestTitle}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+                                <div className={styles.suggestTitle}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                                 <div className={styles.suggestStar}>
                                     <FaStar className={styles.starIcon} style={{ color: "gold" }} />
                                     <FaStar className={styles.starIcon} style={{ color: "gold" }} />
@@ -98,9 +98,8 @@ const VetsSuggestions = () => {
                                     <FaStar className={styles.starIcon} />
                                 </div>
                                 <div className={styles.suggestDetail}>
-                                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, minus incidunt illo aliquam, unde nihil numquam ipsam perferendis doloribus sed fugiat tempora maiores eos nemo?
-                                    <br /><br />
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, dolorem?."
+                                    "Thoughtfully prepared recipes and practical care for happier, healthier dogs.<br /><br />
+                                    Thoughtfully prepared recipes and practical care for happier, healthier dogs."
                                 </div>
                             </div>
                             : ""}
@@ -115,9 +114,8 @@ const VetsSuggestions = () => {
                                     <FaStar className={styles.starIcon} style={{ color: "gold" }} />
                                 </div>
                                 <div className={styles.suggestDetail}>
-                                    "Repellendus, minus incidunt illo aliquam, unde nihil numquam ipsam perferendis doloribus sed fugiat tempora maiores eos nemo? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                    <br /><br />
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, dolorem?."
+                                    "Repellendus, minus incidunt illo aliquam, unde nihil numquam ipsam perferendis doloribus sed fugiat tempora maiores eos nemo? Thoughtfully prepared recipes and practical care for happier, healthier dogs.<br /><br />
+                                    Thoughtfully prepared recipes and practical care for happier, healthier dogs."
                                 </div>
                             </div>
                             : ""}

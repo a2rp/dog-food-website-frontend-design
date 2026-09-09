@@ -1,0 +1,77 @@
+.container {
+  margin-top: 100px;
+  background-color: #faae02;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+.container .main {
+  width: 100%;
+  max-width: 1440px;
+}
+.container .main .title {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+.container .main .aboutTitle {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.container .main .aboutTitle .aboutTitleMain {
+  text-align: center;
+  max-width: 400px;
+  color: #fff;
+}
+.container .main .imagesTextContainer {
+  display: flex;
+  justify-content: center;
+}
+.container .main .imagesTextContainer .columnsContainer {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media only screen and (width < 900px) {
+  .container .main .imagesTextContainer .columnsContainer {
+    flex-wrap: wrap;
+  }
+}
+.container .main .imagesTextContainer .columnsContainer .col1,
+.container .main .imagesTextContainer .columnsContainer .col2,
+.container .main .imagesTextContainer .columnsContainer .col3 {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+.container .main .imagesTextContainer .columnsContainer .col1 .image,
+.container .main .imagesTextContainer .columnsContainer .col2 .image,
+.container .main .imagesTextContainer .columnsContainer .col3 .image {
+  height: 200px;
+}
+.container .main .imagesTextContainer .columnsContainer .col1 .textContainer,
+.container .main .imagesTextContainer .columnsContainer .col2 .textContainer,
+.container .main .imagesTextContainer .columnsContainer .col3 .textContainer {
+  height: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .main .imagesTextContainer .columnsContainer .col1 .textContainer .colHeading,
+.container .main .imagesTextContainer .columnsContainer .col2 .textContainer .colHeading,
+.container .main .imagesTextContainer .columnsContainer .col3 .textContainer .colHeading {
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+}
+.container .main .imagesTextContainer .columnsContainer .col1 .textContainer .colText,
+.container .main .imagesTextContainer .columnsContainer .col2 .textContainer .colText,
+.container .main .imagesTextContainer .columnsContainer .col3 .textContainer .colText {
+  margin-top: 15px;
+  color: #fff;
+}/*# sourceMappingURL=styles.module.css.map */

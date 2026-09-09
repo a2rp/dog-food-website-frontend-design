@@ -9,7 +9,7 @@ const Reviews = () => {
 
                 <div className={styles.commentsContainer}>
                     <div className={styles.comment1}>
-                        <div className={styles.comment}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur impedit aut, eaque odit deserunt incidunt eligendi debitis, aspernatur, labore illo a quisquam dolorem. Incidunt, repellendus tempore. Harum eligendi mollitia nemo!</div>
+                        <div className={styles.comment}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                         <div className={styles.detail}>
                             <div className={styles.imageContainer}></div>
                             <div className={styles.name}>Celia Almenda</div>
@@ -17,7 +17,7 @@ const Reviews = () => {
                         </div>
                     </div>
                     <div className={styles.comment2}>
-                        <div className={styles.comment}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur impedit aut, eaque odit deserunt incidunt eligendi debitis, aspernatur, labore illo a quisquam dolorem. Incidunt, repellendus tempore. Harum eligendi mollitia nemo!lorem1500 et Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deserunt necessitatibus laudantium voluptatem dolores? Provident. </div>
+                        <div className={styles.comment}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                         <div className={styles.detail}>
                             <div className={styles.imageContainer}></div>
                             <div className={styles.name}>Nat Reynoplds</div>
@@ -25,7 +25,7 @@ const Reviews = () => {
                         </div>
                     </div>
                     <div className={styles.comment3}>
-                        <div className={styles.comment}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur impedit aut, eaque odit deserunt incidunt eligendi debitis, aspernatur, labore illo a quisquam dolorem. Incidunt, repellendus tempore. Harum eligendi mollitia nemo! Lorem ipsum dolor sit amet. </div>
+                        <div className={styles.comment}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                         <div className={styles.detail}>
                             <div className={styles.imageContainer}></div>
                             <div className={styles.name}>Bob Ronerts</div>

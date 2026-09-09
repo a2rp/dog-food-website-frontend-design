@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container .main {
+  width: 100%;
+  max-width: 1440px;
+  padding: 30px;
+}
+.container .main .title {
+  font-size: 32px;
+  font-weight: 900;
+}
+.container .main .outlet {
+  margin-top: 15px;
+}/*# sourceMappingURL=styles.module.css.map */

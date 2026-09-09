@@ -1,0 +1,69 @@
+.container .topSection {
+  background-color: #007ba7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .topSection .main {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+@media only screen and (width < 1000px) {
+  .container .topSection .main {
+    flex-wrap: wrap;
+  }
+  .container .topSection .main .col2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container .topSection .main .col1 {
+  width: 100%;
+}
+.container .topSection .main .col1 .mainText {
+  font-size: 100px;
+  font-weight: 900;
+  color: #fff;
+}
+@media only screen and (width < 1000px) {
+  .container .topSection .main .col1 .mainText {
+    font-size: 50px;
+  }
+}
+.container .topSection .main .col1 .infoText {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+.container .topSection .main .col1 .signup {
+  margin-top: 30px;
+  background-color: #faae02;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  text-decoration: none;
+  font-size: 32px;
+  transition: box-shadow 0.2s ease;
+}
+.container .topSection .main .col1 .signup:hover {
+  box-shadow: 0 0 15px 3px #aaa;
+}
+.container .topSection .main .col2 {
+  display: flex;
+}
+@media only screen and (width < 500px) {
+  .container .topSection .main .col2 .image1 {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

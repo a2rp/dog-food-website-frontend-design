@@ -18,7 +18,7 @@ const Home = () => {
             <ResuableComponent
                 mainTitle={"Freshly made food for good health."}
                 image={recipeImage}
-                aboutTitleMain={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos facere, quos corrupti dolore iste modi."}
+                aboutTitleMain={"Balanced recipes made with recognizable ingredients, gentle preparation, and nutrition your dog can enjoy every day."}
                 row1Col1Title={"Real Food"}
                 row1Col1Text={"Human-grade meat and veggies in simple recipes, made for dogs"}
                 row2Col1Title={"Standard Kitchen"}
@@ -34,17 +34,17 @@ const Home = () => {
 
             {/* packaging */}
             <ResuableComponent
-                mainTitle={"Special secured packaging with multiple layers"}
+                mainTitle={"Freshness sealed in every delivery"}
                 image={securedPackagingImage}
-                aboutTitleMain={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos facere, quos corrupti dolore iste modi."}
-                row1Col1Title={"Feature 1"}
-                row1Col1Text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit dolore, fuga accusamus suscipit magni."}
-                row2Col1Title={"Feature 3"}
-                row2Col1Text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit dolore, fuga accusamus suscipit magni."}
-                row1Col3Title={"Feature 2"}
-                row1Col3Text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit dolore, fuga accusamus suscipit magni."}
-                row2Col3Title={"Feature 4"}
-                row2Col3Text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit dolore, fuga accusamus suscipit magni."}
+                aboutTitleMain={"Balanced recipes made with recognizable ingredients, gentle preparation, and nutrition your dog can enjoy every day."}
+                row1Col1Title={"Cold-chain protection"}
+                row1Col1Text={"Thoughtfully prepared recipes and practical care for happier, healthier dogs."}
+                row2Col1Title={"Easy portioning"}
+                row2Col1Text={"Thoughtfully prepared recipes and practical care for happier, healthier dogs."}
+                row1Col3Title={"Leak-resistant seal"}
+                row1Col3Text={"Thoughtfully prepared recipes and practical care for happier, healthier dogs."}
+                row2Col3Title={"Recyclable materials"}
+                row2Col3Text={"Thoughtfully prepared recipes and practical care for happier, healthier dogs."}
             />
             <VetsSuggestions />
             <CustomerReviews />

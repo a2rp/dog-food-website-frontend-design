@@ -10,7 +10,7 @@ const CustomerReviews = () => {
             <div className={styles.main}>
                 <div className={styles.titleContainer}>
                     <div className={styles.title}>Our customers reviews for our food delivery satisfaction</div>
-                    <div className={styles.aboutTitle}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vero aut eligendi, ab corporis et eiusllo.</div>
+                    <div className={styles.aboutTitle}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                 </div>
 
                 <div className={styles.detail}>

@@ -8,7 +8,7 @@ const OurBestSellingProducts = () => {
             <div className={styles.main}>
                 <div className={styles.title}>Our Best Selling Products</div>
                 <div className={styles.aboutTitle}>
-                    <div className={styles.aboutTitleMain}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, aliquam. Assumenda magni soluta libero distinctio hic minus doloribus qui vero, obcaecati.</div>
+                    <div className={styles.aboutTitleMain}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                 </div>
                 <div className={styles.colsContainer}>
                     <div className={styles.col1}>

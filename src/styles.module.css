@@ -1,0 +1,43 @@
+.container {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+.container .header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+.container .main {
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+.container .main .router {
+  width: 100%;
+}
+.container .main .router .pageRoutes {
+  min-height: calc(100vh - 100px);
+}
+.container .arrowUp {
+  z-index: 99;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #000;
+  color: orangered;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+  transition: box-shadow 0.2s ease;
+}
+.container .arrowUp:hover {
+  box-shadow: 0 0 15px 3px #aaa;
+}/*# sourceMappingURL=styles.module.css.map */

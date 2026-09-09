@@ -10,7 +10,7 @@ const OurServicesForYou = () => {
             <div className={styles.main}>
                 <div className={styles.title}>Our Services for you</div>
                 <div className={styles.aboutTitle}>
-                    <div className={styles.aboutTitleMain}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur molestias repudiandae sapiente neque nesciunt.</div>
+                    <div className={styles.aboutTitleMain}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                 </div>
                 <div className={styles.imagesTextContainer}>
                     <div className={styles.columnsContainer}>
@@ -18,21 +18,21 @@ const OurServicesForYou = () => {
                             <img className={styles.image} src={image1} alt="" />
                             <div className={styles.textContainer}>
                                 <div className={styles.colHeading}>Vitamins and minerals</div>
-                                <div className={styles.colText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam deserunt commodi sequi autem id neque magnam rerum labore odit.</div>
+                                <div className={styles.colText}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                             </div>
                         </div>
                         <div className={styles.col2}>
                             <img src={image2} alt="" />
                             <div className={styles.textContainer}>
                                 <div className={styles.colHeading}>On time delivery</div>
-                                <div className={styles.colText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam deserunt commodi sequi autem id neque magnam rerum labore odit.</div>
+                                <div className={styles.colText}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                             </div>
                         </div>
                         <div className={styles.col3}>
                             <img src={image3} alt="" />
                             <div className={styles.textContainer}>
                                 <div className={styles.colHeading}>Secured packaging</div>
-                                <div className={styles.colText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam deserunt commodi sequi autem id neque magnam rerum labore odit.</div>
+                                <div className={styles.colText}>Thoughtfully prepared recipes and practical care for happier, healthier dogs.</div>
                             </div>
                         </div>
                     </div>

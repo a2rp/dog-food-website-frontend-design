@@ -1,0 +1,205 @@
+.container {
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.container .main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.container .main .leftSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .leftSection .logo {
+  background-color: #faae02;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease;
+}
+.container .main .leftSection .logo:hover {
+  box-shadow: 0 0 15px 3px #aaa;
+}
+.container .main .leftSection .navlink {
+  text-decoration: none;
+  color: #007ba7;
+  font-size: 16px;
+  padding: 30px;
+  font-weight: 500;
+}
+@media only screen and (width < 900px) {
+  .container .main .leftSection .navlink {
+    display: none;
+  }
+}
+.container .main .leftSection .navlink:hover {
+  text-decoration: underline;
+}
+.container .main .leftSection .productNavlinksParent {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+}
+@media only screen and (width < 900px) {
+  .container .main .leftSection .productNavlinksParent {
+    display: none;
+  }
+}
+.container .main .leftSection .productNavlinksParent:hover .productIcon {
+  transform: rotateZ(180deg);
+}
+.container .main .leftSection .productNavlinksParent .productText {
+  color: #007ba7;
+  font-size: 16px;
+  font-weight: 500;
+}
+.container .main .leftSection .productNavlinksParent .productIcon {
+  color: #007ba7;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .leftSection .productNavlinksParent:hover .productNavlinksContainer {
+  display: block;
+}
+.container .main .leftSection .productNavlinksParent .productNavlinksContainer {
+  background-color: #fff;
+  border: 1px solid #000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  animation: animateProducts 0.3s ease;
+}
+@keyframes animateProducts {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.container .main .leftSection .productNavlinksParent .productNavlinksContainer .productNavlink {
+  display: block;
+  text-align: center;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.container .main .leftSection .productNavlinksParent .productNavlinksContainer .productNavlink:hover {
+  text-decoration: underline;
+}
+.container .main .rightSection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .main .rightSection .login {
+  background-color: #faae02;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+.container .main .rightSection .login:hover {
+  box-shadow: 0 0 15px 3px #aaa;
+}
+@media only screen and (width < 900px) {
+  .container .main .rightSection .login {
+    display: none;
+  }
+}
+.container .main .rightSection .hamburger {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (width < 900px) {
+  .container .main .rightSection .hamburger {
+    display: block;
+  }
+}
+.container .main .rightSection .hamburger .line1,
+.container .main .rightSection .hamburger .line2,
+.container .main .rightSection .hamburger .line3 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background-color: #000;
+  height: 5px;
+  transition: transform 0.2s ease;
+}
+.container .main .rightSection .hamburger .line1 {
+  transform: translateY(-10px);
+}
+.container .main .rightSection .hamburger .line3 {
+  transform: translateY(10px);
+}
+.container .main .rightSection .hamburgerLinksContainer {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  height: calc(100vh - 100px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.container .main .rightSection .hamburgerLinksContainer .empty {
+  width: 100%;
+  height: 100%;
+}
+.container .main .rightSection .hamburgerLinksContainer .navlinksContainer {
+  flex: 0 0 250px;
+  overflow: auto;
+  background-color: #000;
+}
+.container .main .rightSection .hamburgerLinksContainer .navlinksContainer .hamburgerNavlink {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-left: 15px;
+  text-decoration: none;
+}
+.container .main .rightSection .hamburgerLinksContainer .navlinksContainer .hamburgerNavlink:hover {
+  text-decoration: underline;
+}
+.container .main .rightSection .hamburgerLinksContainer .navlinksContainer .productNavlinkText {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-left: 15px;
+}
+.container .main .rightSection .hamburgerLinksContainer .navlinksContainer .productNavlinksContainer {
+  padding-left: 30px;
+}/*# sourceMappingURL=styles.module.css.map */
