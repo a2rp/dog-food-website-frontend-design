@@ -93,3 +93,39 @@
         }
     }
 }
+
+.eyebrow {
+    color: #f6c06d;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    margin-bottom: 18px;
+}
+
+.supportText {
+    max-width: 520px;
+    margin-top: 22px;
+    color: rgba(255, 255, 255, .82);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.mainText span {
+    color: #f6c06d;
+}
+
+.infoText {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.infoText span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.signup {
+    gap: 18px;
+}

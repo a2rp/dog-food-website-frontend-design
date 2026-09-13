@@ -1,0 +1,754 @@
+.container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    padding: 14px var(--page-padding);
+
+    background: rgba(247, 243, 235, 0.88);
+    border-bottom: 1px solid transparent;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.inner {
+    width: min(100%, var(--page-width));
+    min-height: 68px;
+    margin: 0 auto;
+    padding: 0 10px 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(23, 56, 45, 0.08);
+    border-radius: 999px;
+
+    box-shadow: var(--shadow-small);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.logo {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--primary);
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 50%;
+
+    font-size: 1rem;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.logo:hover .logoIcon {
+    background: var(--accent);
+
+    transform: rotate(-10deg) scale(1.08);
+}
+
+.logoText {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.logoText span {
+    color: var(--accent);
+}
+
+.desktopNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.navLink,
+.productButton {
+    position: relative;
+
+    padding: 12px 14px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    background: transparent;
+    color: var(--text-soft);
+
+    border-radius: 999px;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+
+    transition:
+        color var(--transition-fast),
+        background var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.navLink:hover,
+.productButton:hover {
+    background: var(--surface-soft);
+    color: var(--primary);
+}
+
+.navLink.active,
+.productButton.active {
+    color: var(--primary);
+}
+
+.navLink.active::after,
+.productButton.active::after {
+    content: "";
+
+    position: absolute;
+    right: 14px;
+    bottom: 6px;
+    left: 14px;
+
+    height: 2px;
+
+    background: var(--accent);
+
+    border-radius: 999px;
+}
+
+.productMenu {
+    position: relative;
+}
+
+.productButton {
+    cursor: default;
+}
+
+.productButton svg {
+    font-size: 0.7rem;
+
+    transition: transform var(--transition-normal);
+}
+
+.productMenu:hover .productButton svg,
+.productMenu:focus-within .productButton svg {
+    transform: rotate(180deg);
+}
+
+.productDropdown {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+
+    z-index: 20;
+
+    width: 270px;
+    padding: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background: #fffaf3;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: var(--shadow-medium);
+
+    transform: translate(-50%, 12px);
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.productDropdown::before {
+    content: "";
+
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    width: 100%;
+    height: 18px;
+}
+
+.productMenu:hover .productDropdown,
+.productMenu:focus-within .productDropdown {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translate(-50%, 0);
+}
+
+.productDropdown a {
+    padding: 13px 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    border-radius: 12px;
+
+    transition:
+        background var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.productDropdown a:hover {
+    background: var(--background);
+
+    transform: translateX(3px);
+}
+
+.productDropdown span {
+    color: var(--text);
+
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.productDropdown small {
+    color: var(--text-soft);
+
+    font-size: 0.72rem;
+}
+
+.actions {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shopButton {
+    min-height: 48px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 999px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    transition:
+        background var(--transition-normal),
+        box-shadow var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.shopButton svg {
+    font-size: 0.78rem;
+
+    transition: transform var(--transition-normal);
+}
+
+.shopButton:hover {
+    background: var(--accent);
+
+    box-shadow: 0 10px 24px rgba(237, 117, 66, 0.25);
+
+    transform: translateY(-2px);
+}
+
+.shopButton:hover svg {
+    transform: translateX(4px);
+}
+
+.menuButton {
+    width: 46px;
+    height: 46px;
+
+    display: none;
+    place-items: center;
+
+    background: var(--surface-soft);
+    color: var(--primary);
+
+    border-radius: 50%;
+
+    font-size: 1.05rem;
+
+    transition:
+        background var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.menuButton:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+
+    transform: rotate(5deg);
+}
+
+/* Mobile backdrop */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1001;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background: rgba(15, 41, 33, 0.7);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal);
+}
+
+.overlayVisible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile side drawer */
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1002;
+
+    width: min(390px, 88vw);
+    height: 100vh;
+    height: 100dvh;
+
+    padding: 24px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fffaf3;
+    color: var(--primary);
+
+    border-left: 1px solid rgba(23, 56, 45, 0.08);
+
+    box-shadow: -24px 0 70px rgba(15, 41, 33, 0.25);
+
+    transform: translateX(105%);
+
+    transition: transform var(--transition-slow);
+
+    isolation: isolate;
+    overscroll-behavior: contain;
+}
+
+.mobileMenu::before {
+    content: "";
+
+    position: absolute;
+    top: -120px;
+    right: -120px;
+
+    z-index: -1;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(237, 117, 66, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.mobileMenu::after {
+    content: "";
+
+    position: absolute;
+    bottom: -140px;
+    left: -120px;
+
+    z-index: -1;
+
+    width: 320px;
+    height: 320px;
+
+    background: rgba(242, 197, 107, 0.13);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.mobileMenuOpen {
+    transform: translateX(0);
+}
+
+.mobileHeader {
+    position: relative;
+    z-index: 3;
+
+    padding-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: #fffaf3;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.mobileLogo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--primary);
+
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.mobileLogo svg {
+    color: var(--accent);
+}
+
+.closeButton {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--white);
+    color: var(--primary);
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    box-shadow: var(--shadow-small);
+
+    font-size: 1.1rem;
+
+    transition:
+        background var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.closeButton:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+
+    transform: rotate(90deg);
+}
+
+.mobileNav {
+    position: relative;
+    z-index: 3;
+
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fffaf3;
+}
+
+.mobileNav > a,
+.mobileProductButton {
+    width: 100%;
+    min-height: 54px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fffaf3;
+    color: var(--primary);
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    text-align: left;
+
+    transition:
+        color var(--transition-fast),
+        padding var(--transition-fast);
+}
+
+.mobileNav > a:hover {
+    padding-left: 6px;
+
+    color: var(--accent);
+}
+
+.mobileProductButton:hover {
+    color: var(--accent);
+}
+
+.mobileProductButton svg {
+    font-size: 0.72rem;
+
+    transition:
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.rotateIcon {
+    color: var(--accent);
+
+    transform: rotate(180deg);
+}
+
+.mobileProductLinks {
+    position: relative;
+    z-index: 3;
+
+    max-height: 0;
+    padding-left: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fffaf3;
+
+    transition: max-height var(--transition-slow);
+}
+
+.mobileProductLinksOpen {
+    max-height: 190px;
+}
+
+.mobileProductLinks a {
+    padding: 12px 0;
+
+    color: var(--text-soft);
+
+    border-bottom: 1px solid rgba(24, 39, 31, 0.06);
+
+    font-size: 0.8rem;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.mobileProductLinks a:hover {
+    color: var(--accent);
+
+    transform: translateX(4px);
+}
+
+.mobileShopButton {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    min-height: 56px;
+    margin-top: auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 16px;
+
+    box-shadow: 0 12px 28px rgba(23, 56, 45, 0.16);
+
+    font-size: 0.86rem;
+    font-weight: 600;
+
+    transition:
+        background var(--transition-normal),
+        box-shadow var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.mobileShopButton svg {
+    transition: transform var(--transition-normal);
+}
+
+.mobileShopButton:hover {
+    background: var(--accent);
+
+    box-shadow: 0 12px 28px rgba(237, 117, 66, 0.2);
+
+    transform: translateY(-2px);
+}
+
+.mobileShopButton:hover svg {
+    transform: translateX(4px);
+}
+
+.mobileText {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 16px;
+
+    color: var(--text-light);
+
+    font-size: 0.72rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 1060px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .menuButton {
+        display: grid;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 620px) {
+    .container {
+        padding: 10px 14px;
+
+        background: rgba(247, 243, 235, 0.94);
+    }
+
+    .inner {
+        min-height: 60px;
+        padding: 0 7px 0 15px;
+
+        gap: 12px;
+
+        background: rgba(255, 255, 255, 0.94);
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logoIcon {
+        width: 35px;
+        height: 35px;
+
+        font-size: 0.85rem;
+    }
+
+    .logoText {
+        font-size: 1.18rem;
+    }
+
+    .shopButton {
+        display: none;
+    }
+
+    .menuButton {
+        width: 44px;
+        height: 44px;
+    }
+
+    .mobileMenu {
+        width: 88vw;
+        max-width: 370px;
+
+        padding: 20px;
+
+        background: #fffaf3;
+    }
+
+    .mobileHeader,
+    .mobileNav,
+    .mobileProductLinks {
+        background: #fffaf3;
+    }
+
+    .mobileHeader {
+        padding-bottom: 18px;
+    }
+
+    .mobileNav {
+        padding-top: 14px;
+    }
+
+    .mobileNav > a,
+    .mobileProductButton {
+        min-height: 52px;
+    }
+
+    .mobileShopButton {
+        min-height: 54px;
+    }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .inner {
+        padding-left: 12px;
+    }
+
+    .logoText {
+        font-size: 1.05rem;
+    }
+
+    .mobileMenu {
+        width: 92vw;
+        padding: 18px;
+    }
+}

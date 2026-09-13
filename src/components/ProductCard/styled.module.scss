@@ -1,0 +1,189 @@
+.card {
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+
+    box-shadow: 0 12px 34px rgba(23, 56, 45, 0.06);
+
+    transition:
+        transform var(--transition-slow),
+        box-shadow var(--transition-slow),
+        border-color var(--transition-slow);
+}
+
+.card:hover {
+    border-color: rgba(237, 117, 66, 0.22);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-9px);
+}
+
+.imageContainer {
+    position: relative;
+
+    height: 300px;
+    margin: 10px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(237, 117, 66, 0.13),
+            transparent 44%
+        ),
+        var(--background);
+
+    border-radius: 21px;
+}
+
+.image {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+
+    transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+    transform: scale(1.06) rotate(-1deg);
+}
+
+.label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+
+    padding: 8px 12px;
+
+    background: var(--white);
+    color: var(--primary);
+    border-radius: 999px;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    box-shadow: var(--shadow-small);
+}
+
+.imageIcon {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+
+    font-size: 0.8rem;
+
+    transition:
+        transform var(--transition-normal),
+        background var(--transition-normal);
+}
+
+.card:hover .imageIcon {
+    background: var(--accent);
+    transform: rotate(12deg);
+}
+
+.content {
+    padding: 17px 24px 24px;
+}
+
+.rating {
+    margin-bottom: 9px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--yellow);
+
+    font-size: 0.73rem;
+    font-weight: 700;
+}
+
+.rating span {
+    color: var(--text-soft);
+}
+
+.content h3 {
+    margin-bottom: 9px;
+
+    color: var(--primary);
+
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.content > p {
+    min-height: 50px;
+
+    color: var(--text-soft);
+
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+
+.footer {
+    margin-top: 22px;
+    padding-top: 18px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+
+    border-top: 1px solid var(--border);
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.price small {
+    color: var(--text-light);
+    font-size: 0.63rem;
+}
+
+.price strong {
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.button {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.button:hover {
+    background: var(--accent);
+    transform: translateX(4px);
+}

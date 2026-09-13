@@ -1,0 +1,232 @@
+.page {
+    animation: pageEnter 0.5s ease;
+}
+
+.hero {
+    padding: 48px var(--page-padding) 70px;
+}
+
+.heroInner {
+    width: min(100%, var(--page-width));
+    margin: 0 auto;
+    padding: clamp(45px, 8vw, 100px);
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 0%,
+            rgba(237, 117, 66, 0.13),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 90%,
+            rgba(242, 197, 107, 0.25),
+            transparent 28%
+        ),
+        var(--background-light);
+
+    border: 1px solid var(--border);
+    border-radius: 42px;
+}
+
+.label {
+    margin-bottom: 20px;
+    padding: 9px 13px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    border-radius: 999px;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 930px;
+    margin: 0 auto;
+
+    color: var(--primary);
+
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 600;
+    line-height: 0.94;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.heroInner > p {
+    max-width: 680px;
+    margin: 26px auto 0;
+
+    color: var(--text-soft);
+
+    font-size: 0.9rem;
+    line-height: 1.85;
+}
+
+.heroBenefits {
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.heroBenefits span {
+    padding: 9px 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.heroBenefits svg {
+    color: var(--accent);
+}
+
+.productsSection {
+    padding: 80px var(--page-padding) 100px;
+}
+
+.productsInner {
+    width: min(100%, var(--page-width));
+    margin: 0 auto;
+}
+
+.productGrid {
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.benefitsSection {
+    padding: 0 var(--page-padding) 100px;
+}
+
+.benefitsInner {
+    width: min(100%, var(--page-width));
+    margin: 0 auto;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+    background: var(--primary);
+    border-radius: 30px;
+}
+
+.benefit {
+    padding: 22px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.benefit:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-4px);
+}
+
+.benefit > span {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 50%;
+}
+
+.benefit h2 {
+    color: var(--white);
+
+    font-size: 1.4rem;
+}
+
+.benefit p {
+    margin-top: 6px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 0.7rem;
+    line-height: 1.7;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .productGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefitsInner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero,
+    .productsSection,
+    .benefitsSection {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .heroInner {
+        padding: 40px 22px;
+        border-radius: 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 16vw, 5rem);
+    }
+
+    .benefitsInner {
+        padding: 15px;
+    }
+}

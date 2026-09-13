@@ -10,11 +10,13 @@ const TopSection = () => {
             <div className={styles.topSection}>
                 <div className={styles.main}>
                     <div className={styles.col1}>
-                        <div className={styles.mainText}>BEST ORGANIC FOOD FOR YOUR DOG</div>
+                        <div className={styles.eyebrow}>NOURISH EVERY ADVENTURE</div>
+                        <div className={styles.mainText}>Real food for <span>good dogs.</span></div>
+                        <div className={styles.supportText}>Freshly prepared meals made with honest ingredients, balanced nutrition, and plenty of tail-wagging flavor.</div>
                         <div className={styles.infoText}>
-                            Real Food <GoDotFill /> Made Fresh <GoDotFill /> Delivered
+                            <span><GoDotFill /> Human-grade ingredients</span><span><GoDotFill /> Vet-informed recipes</span><span><GoDotFill /> Delivered fresh</span>
                         </div>
-                        <NavLink to="/signup" className={styles.signup}>Sign up</NavLink>
+                        <NavLink to="/product" className={styles.signup}>Explore meals <span aria-hidden="true">-></span></NavLink>
                     </div>
                     <div className={styles.col2}>
                         <img src={image1} alt="" className={styles.image1} />

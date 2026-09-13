@@ -1,0 +1,259 @@
+.container {
+    padding: 80px var(--page-padding) 28px;
+
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+.main {
+    width: min(100%, var(--page-width));
+    margin: 0 auto;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr 0.7fr 1.25fr;
+    gap: clamp(28px, 5vw, 72px);
+}
+
+.brand {
+    max-width: 360px;
+}
+
+.logo {
+    margin-bottom: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    font-weight: 700;
+}
+
+.logoIcon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--accent);
+    border-radius: 50%;
+
+    transition: transform var(--transition-normal);
+}
+
+.logo:hover .logoIcon {
+    transform: rotate(-10deg) scale(1.08);
+}
+
+.logo b {
+    color: var(--accent);
+}
+
+.brand > p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.84rem;
+    line-height: 1.8;
+}
+
+.socials {
+    margin-top: 24px;
+
+    display: flex;
+    gap: 9px;
+}
+
+.socials a {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+.socials a:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.linksGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.title {
+    margin-bottom: 7px;
+
+    color: var(--white);
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.linksGroup a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.8rem;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.linksGroup a:hover {
+    color: var(--white);
+    transform: translateX(4px);
+}
+
+.newsletterText {
+    margin-bottom: 17px;
+
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.form {
+    min-height: 56px;
+    padding: 6px 7px 6px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+}
+
+.form > svg {
+    flex-shrink: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.form input {
+    width: 100%;
+    min-width: 0;
+
+    color: var(--white);
+    background: transparent;
+    border: 0;
+    outline: 0;
+
+    font-size: 0.78rem;
+}
+
+.form input::placeholder {
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.form button {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 11px;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.form button:hover {
+    background: var(--accent-dark);
+    transform: translateX(2px);
+}
+
+.bottom {
+    margin-top: 64px;
+    padding-top: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom p,
+.bottom a {
+    color: rgba(255, 255, 255, 0.46);
+    font-size: 0.72rem;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 22px;
+}
+
+.bottom a {
+    transition: color var(--transition-fast);
+}
+
+.bottom a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 1000px) {
+    .top {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .newsletter {
+        grid-column: 1 / -1;
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding-top: 64px;
+    }
+
+    .top {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .brand,
+    .newsletter {
+        grid-column: 1 / -1;
+    }
+
+    .bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .top {
+        grid-template-columns: 1fr;
+    }
+
+    .brand,
+    .newsletter {
+        grid-column: auto;
+    }
+}

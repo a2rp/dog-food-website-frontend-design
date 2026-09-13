@@ -1,0 +1,122 @@
+.card {
+    min-height: 100%;
+    overflow: hidden;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+
+    transition:
+        transform var(--transition-slow),
+        box-shadow var(--transition-slow);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-8px);
+}
+
+.imageContainer {
+    position: relative;
+
+    height: 230px;
+    margin: 9px;
+
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--background);
+    border-radius: 20px;
+}
+
+.imageContainer img {
+    width: 76%;
+    height: 76%;
+    object-fit: contain;
+
+    transition: transform var(--transition-slow);
+}
+
+.card:hover .imageContainer img {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+.number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    color: rgba(23, 56, 45, 0.28);
+
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.icon {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.card:hover .icon {
+    background: var(--accent);
+    transform: rotate(8deg);
+}
+
+.content {
+    position: relative;
+
+    padding: 18px 23px 26px;
+}
+
+.content h3 {
+    padding-right: 45px;
+
+    color: var(--primary);
+
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+.content p {
+    margin-top: 11px;
+
+    color: var(--text-soft);
+
+    font-size: 0.77rem;
+    line-height: 1.7;
+}
+
+.arrow {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+
+    color: var(--text-light);
+
+    transition:
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.card:hover .arrow {
+    color: var(--accent);
+    transform: translateX(5px);
+}

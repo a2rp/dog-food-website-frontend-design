@@ -1,0 +1,55 @@
+.button {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 900;
+
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background: var(--primary);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    box-shadow: 0 14px 34px rgba(15, 41, 33, 0.24);
+
+    transform: translateY(16px) scale(0.9);
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal),
+        transform var(--transition-normal),
+        background var(--transition-normal);
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.button:hover {
+    background: var(--accent);
+    transform: translateY(-4px) scale(1.04);
+}
+
+.button svg {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .button {
+        right: 18px;
+        bottom: 18px;
+
+        width: 46px;
+        height: 46px;
+    }
+}

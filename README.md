@@ -1,74 +1,495 @@
+# Bowl & Bark - Dog Food Website
 
-![image](https://github.com/a2rp/dog-food-website-frontend-design/assets/5670738/91a7b480-5f38-4214-92a4-8c079e99bfb3)
+A modern and responsive dog food website frontend built with React.
 
+The project focuses on a clean premium design, smooth user interactions, responsive layouts, reusable components, lazy-loaded routes, subtle animations, and an organized React architecture.
 
-# Getting Started with Create React App
+![Bowl & Bark Website Preview](screenshot.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Preview
 
-In the project directory, you can run:
+Bowl & Bark is designed as a modern dog food brand website featuring product discovery, services, customer reviews, FAQs, product details, and account UI.
 
-### `npm start`
+The application is frontend-only and does not currently include a backend, authentication service, payment gateway, or real ordering system.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Modern responsive user interface
+- Desktop, tablet, and mobile layouts
+- Mobile slide-out navigation menu
+- Sticky navigation header
+- Interactive product dropdown
+- Smooth hover effects
+- Subtle micro animations
+- Reusable React components
+- React Router navigation
+- BrowserRouter implementation
+- Lazy-loaded pages
+- React Suspense route loader
+- Route-based Suspense key
+- Smooth scroll-to-top behavior
+- Floating Go to Top button
+- Product listing page
+- Reusable product details page
+- Services page
+- Customer reviews page
+- Interactive FAQ accordion
+- Login interface
+- Custom 404 page
+- Responsive footer
+- React Icons
+- SCSS Modules
+- Accessible buttons and navigation elements
+- Reduced-motion support
+- Clean component-based architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- React DOM
+- React Router DOM
+- React Icons
+- JavaScript
+- SCSS
+- CSS Modules
+- Create React App
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+    src
+    │
+    ├── components
+    │   ├── Header
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── Footer
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── ScrollToTop
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── PageLoader
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── SectionHeader
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── ProductCard
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── ReviewCard
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── ServiceCard
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── TopSection
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── BuyProduct
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── CustomerReviews
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── OurBestSellingProducts
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── OurServicesForYou
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── VetsSuggestions
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   └── YourRecipes
+    │       ├── images
+    │       ├── index.jsx
+    │       └── styled.module.scss
+    │
+    ├── pages
+    │   ├── home
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── about
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── Products
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── ProductDetails
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── services
+    │   │   ├── images
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── Reviews
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── Faq
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   ├── Login
+    │   │   ├── index.jsx
+    │   │   └── styled.module.scss
+    │   │
+    │   └── NotFound
+    │       ├── index.jsx
+    │       └── styled.module.scss
+    │
+    ├── routes
+    │   └── AppRoutes.jsx
+    │
+    ├── App.js
+    ├── index.js
+    └── index.css
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Pages
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Home
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The homepage combines several reusable sections:
 
-## Learn More
+- Hero section
+- Services
+- Best-selling products
+- Recipe information
+- Veterinary suggestions
+- Customer reviews
+- Product call-to-action
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### About
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Introduces the Bowl & Bark brand, its approach to dog food, core values, and product philosophy.
 
-### Code Splitting
+### Products
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Displays the available meal options using reusable product cards.
 
-### Analyzing the Bundle Size
+### Product Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+A reusable dynamic route handles individual products using a route parameter.
 
-### Making a Progressive Web App
+Example routes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `/product/product1`
+- `/product/product2`
+- `/product/product3`
 
-### Advanced Configuration
+### Services
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Explains meal planning, delivery, packaging, and the overall customer experience.
 
-### Deployment
+### Reviews
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Displays customer experiences and ratings using reusable review components.
 
-### `npm run build` fails to minify
+### FAQ
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Includes an interactive accordion for common questions about products, feeding, delivery, and the website.
+
+### Login
+
+A responsive frontend login interface with:
+
+- Email field
+- Password field
+- Show and hide password control
+- Remember me option
+- Forgot password button
+
+Authentication is not connected.
+
+### Not Found
+
+A custom responsive 404 page for unknown routes.
+
+---
+
+## Routing
+
+Routing is handled using React Router DOM.
+
+Pages are loaded using `React.lazy()`.
+
+The route layer uses `Suspense` with the current pathname as its key so route transitions receive a fresh Suspense boundary.
+
+Example:
+
+    <Suspense
+        key={location.pathname}
+        fallback={<PageLoader />}
+    >
+        <Routes location={location}>
+            ...
+        </Routes>
+    </Suspense>
+
+---
+
+## Available Routes
+
+| Route                 | Page            |
+| --------------------- | --------------- |
+| `/`                   | Home            |
+| `/about`              | About           |
+| `/product`            | Products        |
+| `/product/:productId` | Product Details |
+| `/services`           | Services        |
+| `/reviews`            | Reviews         |
+| `/faq`                | FAQ             |
+| `/login`              | Login           |
+| `*`                   | Not Found       |
+
+---
+
+## Reusable Components
+
+The application separates reusable UI from route-level pages.
+
+Important reusable components include:
+
+- `Header`
+- `Footer`
+- `ScrollToTop`
+- `PageLoader`
+- `SectionHeader`
+- `ProductCard`
+- `ReviewCard`
+- `ServiceCard`
+- `TopSection`
+- `BuyProduct`
+- `CustomerReviews`
+- `OurBestSellingProducts`
+- `OurServicesForYou`
+- `VetsSuggestions`
+- `YourRecipes`
+
+---
+
+## Styling
+
+The project uses SCSS Modules for component and page-specific styles.
+
+Example:
+
+    Component
+    ├── index.jsx
+    └── styled.module.scss
+
+Global design variables are defined in `src/index.css`.
+
+The design system includes:
+
+- Primary green colors
+- Warm cream backgrounds
+- Orange accent color
+- Consistent border radii
+- Reusable shadows
+- Responsive page spacing
+- Shared transitions
+- Responsive typography
+
+---
+
+## Responsive Design
+
+The website is optimized for:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The navigation automatically switches to a slide-out drawer on smaller screens.
+
+The mobile menu includes:
+
+- Solid background
+- Dark page overlay
+- Product submenu
+- Animated open and close interaction
+- Responsive navigation controls
+
+---
+
+## Animations and Interactions
+
+The interface includes lightweight interactions such as:
+
+- Card elevation on hover
+- Image zoom effects
+- Button movement
+- Arrow animations
+- Icon rotation
+- Floating hero elements
+- FAQ transitions
+- Mobile drawer animations
+- Product dropdown animation
+- Smooth scrolling
+
+Motion is automatically minimized when the operating system has reduced-motion enabled.
+
+---
+
+## Getting Started
+
+Clone the repository:
+
+    git clone https://github.com/a2rp/dog-food-website-frontend-design.git
+
+Move into the project directory:
+
+    cd dog-food-website-frontend-design
+
+Install dependencies:
+
+    npm install
+
+Start the development server:
+
+    npm start
+
+The application will start in development mode.
+
+---
+
+## Build
+
+Create a production build using:
+
+    npm run build
+
+The optimized production files will be generated inside the `build` directory.
+
+---
+
+## Frontend-Only Project
+
+This project currently demonstrates the frontend experience only.
+
+The following systems are not connected:
+
+- Backend API
+- Database
+- Real authentication
+- User accounts
+- Payment gateway
+- Shopping cart persistence
+- Real checkout
+- Order processing
+- Delivery management
+
+These features can be integrated separately if required.
+
+---
+
+## Design Goals
+
+The project was modernized with the following goals:
+
+1. Clean and premium visual design
+2. Better reusable component architecture
+3. Responsive mobile experience
+4. Smooth and lightweight interactions
+5. Clear separation between pages and components
+6. Lazy-loaded route pages
+7. Reduced duplicated code
+8. Maintainable SCSS module structure
+9. Improved accessibility
+10. Consistent styling throughout the application
+
+---
+
+## Scripts
+
+### Start Development Server
+
+    npm start
+
+### Create Production Build
+
+    npm run build
+
+### Run Tests
+
+    npm test
+
+---
+
+## Browser Support
+
+The application is intended for modern browsers including:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Safari
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the `LICENSE` file for details.
+
+---
+
+## Author
+
+**Ashish Ranjan**
+
+- Portfolio: https://www.ashishranjan.net
+- GitHub: https://github.com/a2rp
+- LinkedIn: https://www.linkedin.com/in/aashishranjan
+
+---
+
+## Support
+
+If you find this project useful and would like to support future development:
+
+https://a2rp-donation-page.netlify.app/
+
+---
+
+Copyright © Ashish Ranjan. All rights reserved.

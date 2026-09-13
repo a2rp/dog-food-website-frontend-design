@@ -1,0 +1,152 @@
+.container {
+    padding: 100px var(--page-padding);
+}
+
+.main {
+    width: min(100%, var(--page-width));
+    margin: 0 auto;
+}
+
+.headerRow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 50px;
+}
+
+.score {
+    min-width: 245px;
+    padding: 20px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    box-shadow: var(--shadow-small);
+}
+
+.scoreTop {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.scoreTop > strong {
+    color: var(--primary);
+
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+
+    color: var(--yellow);
+
+    font-size: 0.7rem;
+}
+
+.scoreTop span {
+    margin-top: 4px;
+
+    display: block;
+
+    color: var(--text-light);
+    font-size: 0.62rem;
+}
+
+.score > p {
+    margin-top: 14px;
+    padding-top: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--text-soft);
+    border-top: 1px solid var(--border);
+
+    font-size: 0.65rem;
+}
+
+.score > p svg {
+    color: var(--accent);
+}
+
+.gallery {
+    height: 390px;
+    margin-top: 58px;
+
+    display: grid;
+    grid-template-columns: 1.45fr 0.85fr;
+    gap: 14px;
+}
+
+.imageOne,
+.imageTwo {
+    overflow: hidden;
+
+    border-radius: 27px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform var(--transition-slow);
+}
+
+.imageOne:hover img,
+.imageTwo:hover img {
+    transform: scale(1.04);
+}
+
+.imageOne img {
+    object-position: center 35%;
+}
+
+.reviews {
+    margin-top: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 900px) {
+    .headerRow {
+        grid-template-columns: 1fr;
+    }
+
+    .score {
+        width: fit-content;
+    }
+
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 70px 16px;
+    }
+
+    .gallery {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .imageOne,
+    .imageTwo {
+        height: 310px;
+    }
+
+    .score {
+        width: 100%;
+    }
+}

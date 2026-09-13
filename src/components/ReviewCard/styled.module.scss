@@ -1,0 +1,110 @@
+.card {
+    min-height: 100%;
+    padding: 27px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    transition:
+        transform var(--transition-slow),
+        box-shadow var(--transition-slow),
+        border-color var(--transition-slow);
+}
+
+.card:hover {
+    border-color: rgba(237, 117, 66, 0.22);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-7px);
+}
+
+.top {
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.quote {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+
+    transition: transform var(--transition-normal);
+}
+
+.card:hover .quote {
+    transform: rotate(-8deg) scale(1.06);
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+
+    color: #d8d8d8;
+
+    font-size: 0.7rem;
+}
+
+.starActive {
+    color: var(--yellow);
+}
+
+.text {
+    min-height: 108px;
+
+    color: var(--text-soft);
+
+    font-size: 0.82rem;
+    line-height: 1.85;
+}
+
+.person {
+    margin-top: 26px;
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-top: 1px solid var(--border);
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+}
+
+.person h3 {
+    color: var(--primary);
+
+    font-family: var(--font-body);
+    font-size: 0.77rem;
+    font-weight: 600;
+}
+
+.person p {
+    margin-top: 2px;
+
+    color: var(--text-light);
+    font-size: 0.66rem;
+}

@@ -1,0 +1,235 @@
+.container {
+    padding: 100px var(--page-padding);
+}
+
+.main {
+    width: min(100%, var(--page-width));
+    margin: 0 auto;
+}
+
+.content {
+    margin-top: 70px;
+
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(350px, 1.4fr) minmax(
+            220px,
+            1fr
+        );
+    align-items: center;
+    gap: clamp(22px, 4vw, 58px);
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.feature {
+    padding: 22px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.feature:hover {
+    background: var(--surface);
+    box-shadow: var(--shadow-small);
+    transform: translateY(-5px);
+}
+
+.feature > span {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+
+    transition: transform var(--transition-normal);
+}
+
+.feature:hover > span {
+    transform: rotate(-8deg) scale(1.07);
+}
+
+.feature h3 {
+    color: var(--primary);
+
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.feature p {
+    margin-top: 5px;
+
+    color: var(--text-soft);
+
+    font-size: 0.72rem;
+    line-height: 1.65;
+}
+
+.imageContainer {
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageCircle {
+    position: absolute;
+
+    width: min(90%, 430px);
+    aspect-ratio: 1;
+
+    background: radial-gradient(
+        circle,
+        var(--yellow-light),
+        var(--accent-light)
+    );
+
+    border-radius: 50%;
+}
+
+.imageContainer img {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 500px);
+    max-height: 470px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 25px 30px rgba(23, 56, 45, 0.14));
+
+    transition: transform var(--transition-slow);
+}
+
+.imageContainer:hover img {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.badge {
+    position: absolute;
+    right: 3%;
+    bottom: 15%;
+    z-index: 3;
+
+    width: 92px;
+    height: 92px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: var(--white);
+    border: 5px solid var(--background);
+    border-radius: 50%;
+
+    box-shadow: var(--shadow-medium);
+
+    transform: rotate(6deg);
+}
+
+.badge strong {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+}
+
+.badge span {
+    opacity: 0.7;
+
+    font-size: 0.56rem;
+}
+
+.action {
+    margin-top: 45px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    min-height: 56px;
+    padding: 0 24px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    transition:
+        background var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.button svg {
+    transition: transform var(--transition-normal);
+}
+
+.button:hover {
+    background: var(--accent);
+    box-shadow: 0 12px 25px rgba(237, 117, 66, 0.22);
+    transform: translateY(-3px);
+}
+
+.button:hover svg {
+    transform: translateX(4px);
+}
+
+@media (max-width: 1000px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .imageContainer {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 70px 16px;
+    }
+
+    .content {
+        margin-top: 45px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .imageContainer {
+        grid-column: auto;
+        min-height: 390px;
+    }
+
+    .features {
+        gap: 13px;
+    }
+}
