@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[211],{211:(e,n,t)=>{t.r(n),t.d(n,{default:()=>s});t(43);var l=t(579);const s=()=>(0,l.jsx)("div",{style:{fontSize:"20px",fontWeight:"bold"},children:"Daily Balance Bowl"})}}]);
-//# sourceMappingURL=211.a49fcaba.chunk.js.map
