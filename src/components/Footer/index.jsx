@@ -39,16 +39,16 @@ const Footer = () => {
                             <a
                                 href="https://www.facebook.com/"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 aria-label="Facebook"
                             >
                                 <FaFacebookF />
                             </a>
 
                             <a
-                                href="https://www.instagram.com/"
+                                href="https://www.ashishranjan.net"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram />
@@ -57,7 +57,7 @@ const Footer = () => {
                             <a
                                 href="https://www.youtube.com/"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 aria-label="YouTube"
                             >
                                 <FaYoutube />
@@ -119,6 +119,12 @@ const Footer = () => {
                     </p>
 
                     <div className={styles.bottomLinks}>
+                        <a href="https://github.com/a2rp" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://codepen.io/ash1198" target="_blank" rel="noopener noreferrer">CodePen</a>
+                        <a href="mailto:ash.ranjan09@gmail.com">Email</a>
+                        <a href="https://a2rp-donation-page.netlify.app/" target="_blank" rel="noopener noreferrer">Support</a>
+                        <a href="https://buymeacoffee.com/a2rp" target="_blank" rel="noopener noreferrer">Buy Me A Coffee</a>
+                        <a href="https://patreon.com/a2rp" target="_blank" rel="noopener noreferrer">Patreon</a>
                         <NavLink to="/faq">Privacy</NavLink>
                         <NavLink to="/faq">Terms</NavLink>
                     </div>
