@@ -4,11 +4,12 @@ import {
     FaArrowRight,
     FaBars,
     FaChevronDown,
-    FaPaw,
     FaXmark,
 } from "react-icons/fa6";
 
 import styles from "./styled.module.scss";
+
+const logo = `${process.env.PUBLIC_URL}/logo.png`;
 
 const Header = () => {
     const { pathname } = useLocation();
@@ -29,7 +30,7 @@ const Header = () => {
             <div className={styles.inner}>
                 <NavLink to="/" className={styles.logo}>
                     <span className={styles.logoIcon}>
-                        <FaPaw />
+                        <img src={logo} alt="Bowl and Bark logo" />
                     </span>
 
                     <span className={styles.logoText}>
@@ -128,7 +129,7 @@ const Header = () => {
                         className={styles.mobileLogo}
                         onClick={() => setMenuOpen(false)}
                     >
-                        <FaPaw />
+                        <img src={logo} alt="Bowl and Bark logo" />
                         Bowl & Bark
                     </NavLink>
 

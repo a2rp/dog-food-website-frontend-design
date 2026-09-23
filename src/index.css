@@ -126,7 +126,15 @@ body {
     width: 100%;
     min-height: 60vh;
 
+    padding-top: 96px;
+
     flex: 1;
+}
+
+@media (max-width: 620px) {
+    .app-main {
+        padding-top: 82px;
+    }
 }
 
 h1,
